@@ -31,4 +31,4 @@
 
 (defn run-sse
   []
-  (run-time-updater "/test/rest/events" {:events #{:message :people}}))
+  (run-time-updater "rest/events" {:events #{:message :people}}))

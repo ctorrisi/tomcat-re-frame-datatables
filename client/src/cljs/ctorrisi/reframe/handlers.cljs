@@ -18,7 +18,7 @@
   (fn
     [app-state _]
     (let [click-count (subscribe [:click-count])]
-    (GET (str "/test/rest/hello/addOne/" @click-count)
+    (GET (str "rest/hello/addOne/" @click-count)
           :handler #(dispatch [:increment-click-count-response %1])
           :error-handler #(dispatch [:bad-response %1])))
     app-state))
